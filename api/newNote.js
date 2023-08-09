@@ -1,10 +1,8 @@
 import { Client } from "@notionhq/client"
 const notion = new Client({ auth: process.env.NOTION_KEY })
-const databaseId = process.env.NOTION_DATABASE_ID
+const databaseId = '4d453679bd1b4b6f9f316e46a17538ff'
 
 import chalk from 'chalk'
-const q = chalk.blue('Type in your todo\n')
-
 import rl  from 'readline'
 
 function prompt(question) {
