@@ -1,0 +1,11 @@
+.notion-board-view {
+  min-width: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  float: none !important;
+  padding-left: 96px;
+}
+.notion-peek-renderer .notion-page-content{
+  padding-left: calc(48px + env(safe-area-inset-left)) !important;
+  padding-right: calc(48px + env(safe-area-inset-right)) !important;
+}
