@@ -42,6 +42,13 @@ async function addNoteToDB (note, databaseId, opts) {
     const response = await notion.pages.create({
       parent: { database_id: databaseId },
       properties: {
+         "Labels": {
+            multi_select: [
+              {
+                name: 'api test',
+              },
+            ],
+          },
         title: {
           title:[
             {
