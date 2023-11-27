@@ -22,11 +22,7 @@ async function addNoteToDB (note, databaseId, opts = {}) {
       parent: { database_id: databaseId },
       properties: {
          "Labels": {
-            multi_select: [
-              {
-                name: 'api test',
-              },
-            ],
+            multi_select: note.labels,
           },
         title: {
           title:[
@@ -62,12 +58,13 @@ async function addItem() {
   const chosenDB = await select({ message: 'Select the db you wish to add to', choices: database_map })
   const title = await input({ message: 'Enter your title' })
   const content = await editor({ message: 'Enter your content', postfix: '.md' })
-  // console.log(`chosen db ${chosenDB}, title: ${title}, content: ${content}`)
+  const labels = await input({ message: 'Enter labels separated by a comma(,)', postfix: '.md' }).then((text) => text.split(',').map((value) => { return {name: value} }))
 
   addNoteToDB(
     {
       title: title,
-      content: content
+      content: content,
+      labels: labels
     },
     chosenDB,
     // { debug: true }
