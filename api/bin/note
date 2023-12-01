@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 # this will load up the .env file
-
-source .env || 0
+source $HOME/.config/notion-api/.env || 0
 
 newNote.js "$@"
 
