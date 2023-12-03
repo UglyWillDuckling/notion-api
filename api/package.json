@@ -8,6 +8,7 @@
     "@inquirer/prompts": "^3.0.4",
     "@inquirer/select": "^1.2.9",
     "@notionhq/client": "^1.0.1",
+    "@tryfabric/martian": "^1.2.4",
     "chalk": "^5.2.0"
   }
 }
