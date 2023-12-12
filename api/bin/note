@@ -3,5 +3,5 @@
 # this will load up the .env file
 source $HOME/.config/notion-api/.env || 0
 
-newNote.js "$@"
+./newNote.js "$@"
 
