@@ -1,0 +1,15 @@
+--2023-12-18 12:58:03--  https://1.bp.blogspot.com/-u1SaJYr82Po/YRe9INW-90I/AAAAAAAABXE/DNkVZ1HdF4QQAg3xzIzjJQTkBdLep2j5wCLcBGAsYHQ/w1200-h630-p-k-no-nu/squid-game-wide.jpeg
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving 1.bp.blogspot.com (1.bp.blogspot.com)... 172.217.19.97, 2a00:1450:400d:807::2001
+Connecting to 1.bp.blogspot.com (1.bp.blogspot.com)|172.217.19.97|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 170214 (166K) [image/jpeg]
+Saving to: ‘squid-game-wide.jpeg.1’
+
+     0K .......... .......... .......... .......... .......... 30% 1,08M 0s
+    50K .......... .......... .......... .......... .......... 60% 1,32M 0s
+   100K .......... .......... .......... .......... .......... 90% 2,70M 0s
+   150K .......... ......                                     100% 2,78M=0,1s
+
+2023-12-18 12:58:03 (1,53 MB/s) - ‘squid-game-wide.jpeg.1’ saved [170214/170214]
+
