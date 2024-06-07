@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-// TODO
 import { Client } from "@notionhq/client"
 import { input } from '@inquirer/prompts';
 import select, { Separator } from '@inquirer/select';
@@ -48,7 +47,6 @@ async function addItem() {
   const chosenDB = await select({ message: 'Select the db you wish to add to', choices: database_map })
   const title = await input({ message: 'Enter your title' })
   let icon = await input({ message: 'Enter ICON' })
-  icon = icon ? icon : '🗒'
   const content = await editor({ message: 'Enter your content', postfix: '.md' })
   const labels = await input({ message: 'Enter labels separated by a comma(,)', postfix: '.md' })
     .then((text) => text.split(',').filter((value) => !!value).map((value) => { return { name: value } }))
