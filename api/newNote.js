@@ -42,8 +42,6 @@ async function addNoteToDB(note, databaseId, opts = {}, errHandler = () => { }) 
 }
 
 async function addItem() {
-  function send() { addNoteToDB(note, chosenDB, {}, errHandler) }
-
   const chosenDB = await select({ message: 'Select the db you wish to add to', choices: database_map })
   const title = await input({ message: 'Enter your title' })
   let icon = await input({ message: 'Enter ICON' })
@@ -60,7 +58,7 @@ async function addItem() {
     })
   }
 
-  send()
+  addNoteToDB(note, chosenDB, {}, errHandler)
 }
 
 // test()
