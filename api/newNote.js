@@ -17,7 +17,7 @@ const database_map = [{
 }
 ]
 
-async function addNoteToDB(note, databaseId, opts = {}, errHandler = () => { }) {
+async function addItemToDB(note, databaseId, opts = {}, errHandler = () => { }) {
   let properties = {
     title: { title: [{ "text": { "content": note.title } }] },
   }
@@ -58,7 +58,7 @@ async function addItem() {
     })
   }
 
-  addNoteToDB(note, chosenDB, {}, errHandler)
+  addItemToDB(note, chosenDB, {}, errHandler)
 }
 
 // test()
