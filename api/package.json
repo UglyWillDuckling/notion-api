@@ -9,6 +9,7 @@
     "@inquirer/select": "^1.2.9",
     "@notionhq/client": "^1.0.1",
     "@tryfabric/martian": "^1.2.4",
-    "chalk": "^5.2.0"
+    "chalk": "^5.2.0",
+    "node-emoji": "^2.1.3"
   }
 }
