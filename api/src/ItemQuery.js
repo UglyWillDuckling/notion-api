@@ -1,16 +1,17 @@
-import { input } from '@inquirer/prompts';
-import editor from '@inquirer/editor';
 import { Item } from './Item.js';
+import { Title } from './query/title.js';
+import { LabelQuery } from './query/label.js';
+import { EditorQuery } from './query/editor.js';
+import { IconQ } from './query/icon.js';
 
 export class ItemQuery {
   async ask() {
-    const title = await input({ message: 'Enter your title' });
-    let icon = await input({ message: 'Enter ICON' });
-    const content = await editor({ message: 'Enter your content', postfix: '.md' });
-    const labels = await input({ message: 'Enter labels separated by a comma(,)', postfix: '.md' })
-      .then((text) => text.split(',').filter((value) => !!value).map((value) => { return { name: value }; }));
+    const title = (await new Title().ask()).toNotionValue()
+    let icon = (await new IconQ().ask()).toNotionValue()
+    const content = (await new EditorQuery().ask()).toNotionValue()
+    const labels = (await new LabelQuery().ask()).toNotionValue()
 
-    return new Item(title, content, icon, labels);
+    return new Item(title, content, icon, labels)
   }
 }
 

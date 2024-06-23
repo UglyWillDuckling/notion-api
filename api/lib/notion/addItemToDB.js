@@ -8,7 +8,7 @@ export async function addItemToDB(item, databaseId) {
   properties.Labels = { multi_select: item.labels };
 
   let page = {
-    parent: { database_id: databaseId }, properties, children: markdownToBlocks(item.content),
+    parent: { database_id: databaseId }, properties, children: item.content,
     icon: item.icon ? { "type": "emoji", "emoji": item.icon } : null
   };
 

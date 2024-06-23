@@ -6,7 +6,7 @@ import { database_map } from "./src/notion/notion_client.js";
 import { addItemToDB } from './lib/notion/addItemToDB.js';
 import { ItemQuery } from './src/ItemQuery.js';
 
-const debug = true;
+const debug = false;
 
 async function addItem() {
   const chosenDB = await select({ message: 'Select the db you wish to add to', choices: database_map })
