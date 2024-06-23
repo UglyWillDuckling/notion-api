@@ -4,7 +4,7 @@ import select from '@inquirer/select';
 import { RepeatWithQuery } from './lib/utils/RepeatWithQuery.js';
 import { database_map } from "./lib/notion.js";
 import { addItemToDB } from './addItemToDB.js';
-import { ItemQuery } from './ItemQuery.js';
+import { ItemQuery } from './src/ItemQuery.js';
 
 const debug = true;
 
