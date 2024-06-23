@@ -1,8 +1,8 @@
 #!/usr/bin / env node
 
-import { database_map } from "./notion.js";
-import { addItemToDB } from './addItemToDB.js';
-import { randomItem } from './randomItem.js';
+import { database_map } from "../src/notion/notion_client.js";
+import { addItemToDB } from '../lib/notion/addItemToDB.js';
+import { randomItem } from '../src/misc/randomItem.js';
 import select from '@inquirer/select';
 
 const debug = true;

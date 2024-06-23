@@ -1,8 +1,6 @@
 import { markdownToBlocks } from '@tryfabric/martian';
-import { notion } from "./lib/notion.js";
+import { notion } from "../../src/notion/notion_client.js";
 
-// generic function responsible for making the call to notion only
-// TODO: move this to another file as well
 export async function addItemToDB(item, databaseId) {
   let properties = {
     title: { title: [{ "text": { "content": item.title } }] },
