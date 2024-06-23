@@ -1,4 +1,3 @@
-import { markdownToBlocks } from '@tryfabric/martian';
 import { notion } from "../../src/notion/notion_client.js";
 
 export async function addItemToDB(item, databaseId) {
@@ -10,7 +9,7 @@ export async function addItemToDB(item, databaseId) {
   let page = {
     parent: { database_id: databaseId }, properties, children: item.content,
     icon: item.icon ? { "type": "emoji", "emoji": item.icon } : null
-  };
+  }
 
   const response = await notion.pages.create(page);
 
