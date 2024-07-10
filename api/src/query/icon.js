@@ -1,4 +1,6 @@
 import { input } from '@inquirer/prompts'
+import autocomplete from 'inquirer-autocomplete-standalone';
+import * as emoji from 'node-emoji'
 
 export class IconQ {
   #value = '';
@@ -12,7 +14,22 @@ export class IconQ {
   }
 
   async ask() {
-    this.#value = await input({ message: 'Enter ICON' });
+    const answer = await autocomplete({
+      message: 'Choose your icon',
+      source: (input) => {
+        input = input ? input : ''
+        const emojis = emoji.search(input) // [ { emoji: '🦄', name: 'unicorn' }, ... ]
+
+        return emojis.map(country => {
+          return {
+            value: country.emoji,
+            description: country.key
+          }
+        })
+      }
+    })
+
+    this.#value = answer
     return this
   }
 
